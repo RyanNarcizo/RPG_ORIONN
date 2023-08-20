@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rolador de Dados Orionn</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+  body {
+    background-image: url('img/fundo.png'); /* Substitua pelo link da sua imagem */
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 100px;
+  }
+  h1 {
+    color: white;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+  }
+  button:hover {
+    background-color: #2980b9;
+  }
+</style>
+</head>
+<body>
+
+<h1>Rolador de Dados Orionn</h1>
+
+<button id="d4" onclick="rollDice(4)"><i class="fas fa-dice-four"></i> D4</button>
+<button id="d6" onclick="rollDice(6)"><i class="fas fa-dice-six"></i> D6</button>
+<button id="d8" onclick="rollDice(8)"><i class="fas fa-dice-eight"></i> D8</button>
+<button id="d10" onclick="rollDice(10)"><i class="fas fa-dice-ten"></i> D10</button>
+<button id="d20" onclick="rollDice(20)"><i class="fas fa-dice-twenty"></i> D20</button>
+<button id="d100" onclick="rollDice(100)"><i class="fas fa-percentage"></i> D100</button>
+
+<script>
+function rollDice(sides) {
+  var result = Math.floor(Math.random() * sides) + 1;
+  alert('Resultado: ' + result);
+}
+</script>
+
+</body>
+</html>
